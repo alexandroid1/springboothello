@@ -11,10 +11,14 @@ import java.util.List;
  */
 @Service
 public class StackoverflowService {
-
     private static List<StackoverflowWebSite> items = new ArrayList<>();
+    static{
+        items.add(new StackoverflowWebSite("stckoverflow", "http://stackoverflow.com",
+                "http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico",
+                "Stack Overflow (StackExchange)", "for professional and enthusiasist programmers"));
+    }
 
     public List<StackoverflowWebSite> findAll() {
-        return null;
+        return items;
     }
 }
